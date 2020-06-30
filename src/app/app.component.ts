@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
   }
   quizForm: FormGroup = this.fb.group({
-    questions: ['Shyamala', Validators.required],
+    questions: ['What is your name', Validators.required],
     options: this.fb.array([
 
     ]),
@@ -41,8 +41,7 @@ export class AppComponent implements OnInit {
     this.showOptions = this.showOptions + 1;
     this.addoptions = this.quizForm.get('options') as FormArray;
     this.addoptions.push(this.fb.group({
-      name: ['', Validators.required],
-      isBoolean: [, Validators.required]
+      name: ['', Validators.required]
     }));
 
   }
